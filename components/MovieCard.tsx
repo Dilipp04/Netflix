@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import FavoriteButton from "./FavoriteButton";
 import { useRouter } from "next/navigation";
@@ -12,6 +12,10 @@ interface MovieCardProps {
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
   const { openModel } = useInfoModel();
+
+  const handleOpen = useCallback(() => {
+    openModel(data?.id);
+  }, [openModel, data?.id]);
   return (
     <>
       <div className="group bg-zinc-900 col-span relative h-[12vw]">
@@ -75,7 +79,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               </div>
               <FavoriteButton movieId={data?.id} />
               <div
-                onClick={() => openModel(data?.id)}
+                onClick={handleOpen}
                 className="
               cursor-pointer
               ml-auto
