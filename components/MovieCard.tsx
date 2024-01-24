@@ -18,7 +18,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   }, [openModel, data?.id]);
   return (
     <>
-      <div className="group bg-zinc-900 col-span relative h-[12vw]">
+      <div
+        className="group bg-zinc-900 col-span-2 sm:col-span-1 relative  h-[24vw]
+        sm:h-[12vw]">
         <img
           onClick={() => router.push(`/watch/${data?.id}`)}
           className="
@@ -32,7 +34,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         sm:group-hover:opacity-0
         delay-200
         w-full
-        h-[12vw]
+    h-[24vw]
+        sm:h-[12vw]
         "
           src={data.thumbnailUrl}
           alt="Thumbnail"

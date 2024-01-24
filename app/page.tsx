@@ -32,6 +32,7 @@ export default function Home() {
       <div className="">
         <MovieList title="Trending Now" data={movies} />
         <MovieList title="My List" data={favoriteMovies} />
+        <MovieList title="New & Popular" data={movies} />
       </div>
     </>
   );
