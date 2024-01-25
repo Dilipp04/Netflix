@@ -88,7 +88,7 @@ offset-2
             <p className="text-green-400 font-semibold text-lg">New</p>
             <p className="text-white text-lg">{data?.duration}</p>
             <p className="text-white text-lg">{data?.genre}</p>
-            <p className="text-white text-lg">{data?.desciption}</p>
+            <p className="text-white text-lg">{data?.description}</p>
           </div>
         </div>
       </div>
